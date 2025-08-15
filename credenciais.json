@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "twowell",
+  "private_key_id": "1702f2d068485b2656f6eafc8ef142ea54444a37",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZul+kFNvXq060\nqvrKG3ZG+z3aczDmGJH1H/QdagP8naQxzn51yMx5ZDTiveW/ttuzUKAXBYODVJyV\nZE1WWLD4OTzm+Ti1r2BHYr0Jb5xRRKtzzHcUqZ2qR6mIOOmZLje3toGSlY3jEhXj\nZpfCYeGNTOL/ujr93y65qz/hSCSBF1XaRN5Tt84apG5LV9fvWfciH6NGIq9ZyALF\nO/VukRbxPmQv3bwknQRxPC8aocP8GICFUjHBnH8nWEJOuzff1hALl3tj7XmLKNJr\nZ9hw924D5PosgPfr6j9EXV+WHSyxvklzpAwQTwtF/Miw5KStZ2Zo25G0wJLMqSc6\nUpDqhEktAgMBAAECggEAE3/vH+VkWRj1GBY2FtLF0Y6f2Ag4CWuK6u69MMM1bzL5\nKSLKzaa5tWeFmwcR5A0u+QzQAa/TOvhhe7m7eW/BDcImk7MfYpo937bWolk2IUsq\npdjak2WrgrwfUV1zgm4SvGfii+vMBNmyTyb5kYWtqzeHHwshTGpoJ2XQd088QblY\nf8LEGLgv+ut1ZNJMuoaCDvE7QeR308Cu4Sn7jTnOT9IwBBEe0bhuqN2f2BzKGO3S\n2H1LAAXgJW4SP0f+8BEbX1dRBWV8uwsoukAC+Txd1nRr2nIWOMQgKYrjw40o0JAU\n+BgLskjw6p/hh9iKt4e8GdmPXimV8S0/bT6lGts0kQKBgQDybClvQV7p1CtwwGK3\neBZKdmEcHwwFNSXA3mtIgpG6WDtuBY/R9wxQ+sebfM+zBBIKcIRDpRKJ5j3cs/61\nEQYYdFwqAHOAlMtJD60Feto2+ALnp/ba+U9x87cwZbmwh/72q++oxTp23d3GOJKr\npun1EMxrRE/szLon1F80FVwo1QKBgQDl7CTRQBZZDPJbrJkpaiXLWz1UqZ6J26/Q\n5qsiljv2qcgcHwuwnNxKpGRG88fOur/K4KgBz9Mz2cpxO/5Li2cpiFQvRao/xTzQ\nMYsZY6kx84M9PqYKl5B9eEsPAOUX/agj848mSGnyqBHrFRIHrUyAK2PdBmQ2qQWV\n+vsh+UdK+QKBgQCOCd/RJw00ljMJsj9k3kC5Slklv+8sEfLX6boUVySJeW8AzNNy\no3yc6gMQUHXlnsnvQfPNKqgNElFGwlPHxXy70Vm65l7GhOgDG+M1pcC7ml8hWmGh\n9Zed3b2E5uWA0H4MC7u1ODJEOUTbAoS1fGvyQfB0HSdzSJT+B0ns22MPLQKBgQCj\nn3ToERKWVvdWtDLfXTH+UTUJPhicBOJO6Qka+Q09UcAd+x4HlunSmMDgGXa1MQNy\nboRBndOwz6oZAVfMDS3iSamXZp1s+oF3q/pQnDL5YFGiUSY63XevQt8vkzR16Ucy\nJo9V8CytylvOD1WgbvzFLZvI3FaO66QVAuKbX9oTiQKBgFwdwhRZMBDpHXv5Yq3l\nffDhdDgmB3fzMy7yL3mCyt7WPBxKz3MLHng73n1PClDhO0POfL7VPRGOsFOgRUJd\neR7XZs9DWvHaM6SVMmmKYKAO86zauad3nbqVXDXTLYbJEMnnvEnWERd7hS4xKzi2\n6NyMH4aQyXkCl/XucZgIbqWV\n-----END PRIVATE KEY-----\n",
+  "client_email": "twowell@twowell.iam.gserviceaccount.com",
+  "client_id": "103602464796895371151",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/twowell%40twowell.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
