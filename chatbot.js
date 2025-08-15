@@ -21,15 +21,35 @@ const client = new Client({
             '--disable-accelerated-2d-canvas',
             '--no-first-run',
             '--no-zygote',
-            '--single-process', 
+            '--single-process',
             '--disable-gpu'
         ],
     }
 });
 
+
+
+async function isTimeSlotAvailable(startDateTime, endDateTime) {
+    const calendar = google.calendar({ version: 'v3', auth });
+    try {
+        const response = await calendar.events.list({
+            calendarId: 'primary',
+            timeMin: startDateTime.toISOString(),
+            timeMax: endDateTime.toISOString(),
+            maxResults: 1,
+            singleEvents: true,
+        });
+
+        return response.data.items.length === 0;
+
+    } catch (error) {
+        console.error('Erro ao verificar disponibilidade na agenda:', error);
+        return false;
+    }
+}
+
 async function createCalendarEvent(summary, description, startDateTime, endDateTime) {
     const calendar = google.calendar({ version: 'v3', auth });
-
     try {
         const event = {
             summary: summary,
@@ -37,12 +57,10 @@ async function createCalendarEvent(summary, description, startDateTime, endDateT
             start: { dateTime: startDateTime.toISOString(), timeZone: 'America/Sao_Paulo' },
             end: { dateTime: endDateTime.toISOString(), timeZone: 'America/Sao_Paulo' },
         };
-
         const res = await calendar.events.insert({
             calendarId: 'primary',
             resource: event,
         });
-
         return res.data;
     } catch (error) {
         console.error('Erro ao criar evento no Google Calendar:', error);
@@ -68,6 +86,7 @@ async function sendMessageWithTyping(chat, message) {
     await client.sendMessage(chat.id._serialized, message);
 }
 
+
 client.on('message', async msg => {
     if (!msg.from.endsWith('@c.us')) return;
 
@@ -89,7 +108,21 @@ client.on('message', async msg => {
 
             if (isNaN(startDateTime.getTime())) throw new Error('Data inválida');
 
+            if (startDateTime < new Date()) {
+                await sendMessageWithTyping(chat, '❌ Você não pode agendar um horário no passado! Por favor, escolha uma data e hora futuras.');
+                return; 
+            }
+
             const endDateTime = new Date(startDateTime.getTime() + 60 * 60 * 1000);
+
+            await sendMessageWithTyping(chat, `Verificando disponibilidade para ${text} na nossa agenda...`);
+
+            const isAvailable = await isTimeSlotAvailable(startDateTime, endDateTime);
+
+            if (!isAvailable) {
+                await sendMessageWithTyping(chat, '❌ Poxa! Este horário já está ocupado. Por favor, escolha outro dia ou horário e me envie novamente.');
+                return;
+            }
 
             await sendMessageWithTyping(chat, `Confirmando agendamento para ${text}. Só um momento...`);
 
